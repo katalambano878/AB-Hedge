@@ -1,8 +1,7 @@
 import type { MetadataRoute } from "next";
+import { getSiteOrigin } from "@/lib/site";
 
-const base = process.env.NEXT_PUBLIC_SITE_URL?.startsWith("http")
-  ? process.env.NEXT_PUBLIC_SITE_URL
-  : `https://${process.env.NEXT_PUBLIC_SITE_URL ?? "abhedge.vercel.app"}`;
+const base = getSiteOrigin();
 
 const routes = [
   "/",
@@ -11,6 +10,7 @@ const routes = [
   "/industries",
   "/insights",
   "/contact",
+  "/services",
   "/careers",
   "/ab-hedge",
   "/sapalon",

@@ -5,18 +5,13 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { getSiteUrl } from "@/lib/site";
 
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
   weight: ["300", "400", "500", "600", "700"], // Regular, Medium, Semibold, Bold
 });
-
-function getSiteUrl() {
-  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abhedge.vercel.app";
-  const normalized = configuredUrl.startsWith("http") ? configuredUrl : `https://${configuredUrl}`;
-  return new URL(normalized);
-}
 
 const siteUrl = getSiteUrl();
 

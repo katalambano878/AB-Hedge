@@ -79,7 +79,7 @@ export default function OpenGraphImage() {
           }}
         >
           <span>Oil & Gas • Mining • Healthcare • Infrastructure</span>
-          <span style={{ color: "#fbbf24", fontWeight: 700 }}>abhedge.vercel.app</span>
+          <span style={{ color: "#fbbf24", fontWeight: 700 }}>grouphedge.org</span>
         </div>
       </div>
     ),

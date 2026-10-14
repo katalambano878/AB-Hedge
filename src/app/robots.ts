@@ -1,8 +1,7 @@
 import type { MetadataRoute } from "next";
+import { getSiteOrigin } from "@/lib/site";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.startsWith("http")
-  ? process.env.NEXT_PUBLIC_SITE_URL
-  : `https://${process.env.NEXT_PUBLIC_SITE_URL ?? "abhedge.vercel.app"}`;
+const siteUrl = getSiteOrigin();
 
 export default function robots(): MetadataRoute.Robots {
   return {
